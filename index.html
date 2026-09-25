@@ -1,0 +1,1055 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Explore Taman Sari Water Palace in Yogyakarta — a historic royal retreat shaped by water, architecture, hidden passages and living heritage."
+    />
+    <meta name="theme-color" content="#123B4A" />
+    <title>Taman Sari — Where Water Meets History</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              navy: "#123B4A",
+              teal: "#287C72",
+              gold: "#D9A83E",
+              ivory: "#F7F3E8",
+              sand: "#D8C49A",
+              charcoal: "#253238",
+            },
+            fontFamily: {
+              display: ["Cormorant Garamond", "serif"],
+              sans: ["Manrope", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 5rem;
+      }
+      body {
+        font-family: Manrope, sans-serif;
+        color: #253238;
+      }
+      .display {
+        font-family: "Cormorant Garamond", serif;
+      }
+      .nav-scrolled {
+        background: rgba(18, 59, 74, 0.97);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+      }
+      .hero-overlay {
+        background: linear-gradient(
+          90deg,
+          rgba(7, 27, 35, 0.78) 0%,
+          rgba(7, 27, 35, 0.48) 42%,
+          rgba(7, 27, 35, 0.12) 78%,
+          rgba(7, 27, 35, 0.02) 100%
+        );
+      }
+      .hero-bottom {
+        background: linear-gradient(
+          0deg,
+          rgba(7, 27, 35, 0.64),
+          transparent 48%
+        );
+      }
+      .reveal {
+        opacity: 0;
+        transform: translateY(24px);
+        transition:
+          opacity 0.75s ease,
+          transform 0.75s ease;
+      }
+      .reveal.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .snap-track {
+        scrollbar-width: none;
+      }
+      .snap-track::-webkit-scrollbar {
+        display: none;
+      }
+      .lightbox-open {
+        overflow: hidden;
+      }
+      :focus-visible {
+        outline: 3px solid #d9a83e;
+        outline-offset: 4px;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+        *,
+        *::before,
+        *::after {
+          animation-duration: 0.01ms !important;
+          transition-duration: 0.01ms !important;
+        }
+        .reveal {
+          opacity: 1;
+          transform: none;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="bg-white">
+    <a
+      href="#main-content"
+      class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:bg-gold focus:px-4 focus:py-3 focus:text-navy"
+      >Skip to content</a
+    >
+
+    <header
+      id="site-header"
+      class="fixed inset-x-0 top-0 z-50 transition-all duration-300"
+    >
+      <nav
+        class="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 sm:px-8 lg:px-10"
+        aria-label="Primary navigation"
+      >
+        <a href="#hero" class="text-white" aria-label="Taman Sari home">
+          <span class="display text-2xl font-semibold tracking-wide"
+            >Taman Sari</span
+          >
+        </a>
+        <div class="hidden items-center gap-7 lg:flex">
+          <a
+            href="#story"
+            class="text-sm font-medium text-white/90 hover:text-gold"
+            >The Site</a
+          >
+          <a
+            href="#experiences"
+            class="text-sm font-medium text-white/90 hover:text-gold"
+            >Experiences</a
+          >
+          <a
+            href="#gallery"
+            class="text-sm font-medium text-white/90 hover:text-gold"
+            >Gallery</a
+          >
+          <a
+            href="#journal"
+            class="text-sm font-medium text-white/90 hover:text-gold"
+            >Stories</a
+          >
+          <a
+            href="#visit"
+            class="rounded-full border border-white/50 px-5 py-2.5 text-sm font-semibold text-white hover:border-gold hover:bg-gold hover:text-navy"
+            >Visit</a
+          >
+        </div>
+        <button
+          id="menu-btn"
+          type="button"
+          class="inline-flex min-h-11 min-w-11 items-center justify-center rounded-full text-white lg:hidden"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg
+            id="menu-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="1.5"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </nav>
+      <div
+        id="mobile-menu"
+        class="hidden border-t border-white/10 bg-navy px-6 py-6 lg:hidden"
+      >
+        <div class="flex flex-col gap-1">
+          <a
+            href="#story"
+            class="rounded-lg px-3 py-3 text-white hover:bg-white/10"
+            >The Site</a
+          >
+          <a
+            href="#experiences"
+            class="rounded-lg px-3 py-3 text-white hover:bg-white/10"
+            >Experiences</a
+          >
+          <a
+            href="#gallery"
+            class="rounded-lg px-3 py-3 text-white hover:bg-white/10"
+            >Gallery</a
+          >
+          <a
+            href="#journal"
+            class="rounded-lg px-3 py-3 text-white hover:bg-white/10"
+            >Stories</a
+          >
+          <a
+            href="#visit"
+            class="mt-3 rounded-full bg-gold px-5 py-3 text-center text-sm font-bold text-navy"
+            >Plan Your Visit</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <!-- HERO / BERANDA -->
+      <section
+        id="hero"
+        class="relative min-h-[88vh] overflow-hidden sm:min-h-screen"
+        aria-labelledby="hero-title"
+      >
+        <img
+          src="assets/img/hero-taman-sari.png"
+          width="1920"
+          height="1080"
+          alt="Historic Taman Sari courtyard with a reflecting pool, Javanese architecture and tropical greenery"
+          class="absolute inset-0 h-full w-full object-cover object-center"
+          fetchpriority="high"
+          decoding="async"
+        />
+        <div class="absolute inset-0 hero-overlay"></div>
+        <div class="absolute inset-x-0 bottom-0 h-2/5 hero-bottom"></div>
+        <div
+          class="relative mx-auto flex min-h-[88vh] max-w-7xl items-end px-5 pb-20 pt-32 sm:min-h-screen sm:items-center sm:px-8 sm:pb-16 lg:px-10"
+        >
+          <div class="max-w-3xl text-white reveal is-visible">
+            <p
+              class="mb-5 text-xs font-bold uppercase tracking-[0.28em] text-gold"
+            >
+              Heritage Destination
+            </p>
+            <h1
+              id="hero-title"
+              class="display text-5xl font-medium leading-[.9] sm:text-6xl lg:text-8xl"
+            >
+              Where Water<br class="hidden sm:block" />
+              Meets History
+            </h1>
+            <p
+              class="mt-7 max-w-xl text-base leading-7 text-white/85 sm:text-lg sm:leading-8"
+            >
+              Step into a royal retreat of pools, courtyards, hidden passages,
+              and stories that still linger in the heart of Yogyakarta.
+            </p>
+            <div class="mt-8 flex flex-wrap items-center gap-4">
+              <a
+                href="#story"
+                class="inline-flex min-h-12 items-center gap-3 rounded-full bg-gold px-6 py-3 text-sm font-bold text-navy hover:bg-white"
+                >Explore Taman Sari <span aria-hidden="true">→</span></a
+              >
+              <a
+                href="#journal"
+                class="inline-flex min-h-12 items-center px-2 text-sm font-semibold text-white/90 hover:text-gold"
+                >Read the Story</a
+              >
+            </div>
+            <p class="mt-7 text-xs uppercase tracking-[0.2em] text-white/60">
+              Yogyakarta's historic water palace
+            </p>
+          </div>
+        </div>
+        <a
+          href="#story"
+          class="absolute bottom-7 right-6 hidden items-center gap-3 text-[10px] font-bold uppercase tracking-[0.28em] text-white/75 sm:flex"
+          aria-label="Scroll to discover"
+          ><span class="h-px w-10 bg-white/40"></span> Scroll to discover</a
+        >
+      </section>
+
+      <!-- PROFIL / DESTINASI -->
+      <section
+        id="story"
+        class="bg-ivory py-20 sm:py-24 lg:py-32"
+        aria-labelledby="story-title"
+      >
+        <div
+          class="mx-auto grid max-w-7xl items-center gap-12 px-5 sm:px-8 lg:grid-cols-12 lg:gap-16 lg:px-10"
+        >
+          <div class="reveal lg:col-span-6">
+            <div class="overflow-hidden">
+              <img
+                src="assets/img/story-courtyard.png"
+                width="1200"
+                height="900"
+                alt="Weathered Taman Sari courtyard architecture with stone pathways and tropical plants"
+                class="h-[440px] w-full object-cover sm:h-[560px]"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          </div>
+          <div class="reveal lg:col-span-5 lg:col-start-8">
+            <p
+              class="mb-4 text-xs font-bold uppercase tracking-[0.25em] text-teal"
+            >
+              The Story of Taman Sari
+            </p>
+            <h2
+              id="story-title"
+              class="display text-4xl font-medium leading-none text-navy sm:text-5xl lg:text-6xl"
+            >
+              A royal retreat shaped by water, stone, and time.
+            </h2>
+            <p
+              class="mt-7 text-base leading-7 text-charcoal/75 sm:text-lg sm:leading-8"
+            >
+              Taman Sari invites visitors to slow down and look closer. Its
+              courtyards, pools, walls, and passages reveal a layered heritage
+              where royal life, architecture, water, and the changing city meet.
+            </p>
+            <a
+              href="#spaces"
+              class="mt-8 inline-flex min-h-11 items-center gap-3 text-sm font-bold text-navy hover:text-teal"
+              >Discover Taman Sari <span class="text-gold">→</span></a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- SPACES / DESTINATION FEATURES -->
+      <section
+        id="spaces"
+        class="bg-white py-20 sm:py-24 lg:py-32"
+        aria-labelledby="spaces-title"
+      >
+        <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+          <div class="reveal max-w-3xl">
+            <p
+              class="mb-4 text-xs font-bold uppercase tracking-[0.25em] text-gold"
+            >
+              Inside Taman Sari
+            </p>
+            <h2
+              id="spaces-title"
+              class="display text-4xl font-medium leading-none text-navy sm:text-5xl lg:text-6xl"
+            >
+              Discover the spaces, details, and passages that give Taman Sari
+              its enduring character.
+            </h2>
+          </div>
+          <div
+            class="snap-track mt-12 flex gap-5 overflow-x-auto pb-4 lg:grid lg:grid-cols-3 lg:overflow-visible"
+          >
+            <article
+              class="group min-w-[82vw] snap-start sm:min-w-[55vw] lg:min-w-0 reveal"
+            >
+              <div class="overflow-hidden">
+                <img
+                  src="assets/img/water-palace.png"
+                  width="1200"
+                  height="900"
+                  alt="Taman Sari water palace bathing area and historic walls"
+                  class="h-[430px] w-full object-cover transition duration-700 group-hover:scale-105"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="border-b border-navy/15 py-5">
+                <p
+                  class="text-[11px] font-bold uppercase tracking-[0.2em] text-teal"
+                >
+                  The Water Palace
+                </p>
+                <h3 class="display mt-2 text-3xl text-navy">
+                  Water, walls, and reflection.
+                </h3>
+                <p class="mt-2 max-w-sm text-sm leading-6 text-charcoal/65">
+                  A royal retreat where water and architecture meet.
+                </p>
+              </div>
+            </article>
+            <article
+              class="group min-w-[82vw] snap-start sm:min-w-[55vw] lg:min-w-0 reveal"
+            >
+              <div class="overflow-hidden">
+                <img
+                  src="assets/img/bathing-complex.png"
+                  width="1200"
+                  height="900"
+                  alt="Historic bathing complex at Taman Sari with pools and white plaster walls"
+                  class="h-[430px] w-full object-cover transition duration-700 group-hover:scale-105"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="border-b border-navy/15 py-5">
+                <p
+                  class="text-[11px] font-bold uppercase tracking-[0.2em] text-teal"
+                >
+                  The Bathing Complex
+                </p>
+                <h3 class="display mt-2 text-3xl text-navy">
+                  Light across quiet pools.
+                </h3>
+                <p class="mt-2 max-w-sm text-sm leading-6 text-charcoal/65">
+                  A composition of pools, walls, light, and reflection.
+                </p>
+              </div>
+            </article>
+            <article
+              class="group min-w-[82vw] snap-start sm:min-w-[55vw] lg:min-w-0 reveal"
+            >
+              <div class="overflow-hidden">
+                <img
+                  src="assets/img/sumur-gumuling.png"
+                  width="1200"
+                  height="900"
+                  alt="Atmospheric underground passage and historic architecture at Sumur Gumuling, Taman Sari"
+                  class="h-[430px] w-full object-cover transition duration-700 group-hover:scale-105"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="border-b border-navy/15 py-5">
+                <p
+                  class="text-[11px] font-bold uppercase tracking-[0.2em] text-teal"
+                >
+                  Hidden Passages
+                </p>
+                <h3 class="display mt-2 text-3xl text-navy">
+                  A world beneath the surface.
+                </h3>
+                <p class="mt-2 max-w-sm text-sm leading-6 text-charcoal/65">
+                  Atmospheric routes and spaces that deepen the story of the
+                  complex.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- EXPERIENCES -->
+      <section
+        id="experiences"
+        class="bg-ivory py-20 sm:py-24 lg:py-32"
+        aria-labelledby="experience-title"
+      >
+        <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+          <div class="reveal max-w-3xl">
+            <p
+              class="mb-4 text-xs font-bold uppercase tracking-[0.25em] text-teal"
+            >
+              Experience Taman Sari
+            </p>
+            <h2
+              id="experience-title"
+              class="display text-4xl font-medium leading-none text-navy sm:text-5xl lg:text-6xl"
+            >
+              Experience the culture, not just the destination.
+            </h2>
+          </div>
+          <div class="mt-14 grid gap-5 lg:grid-cols-12 lg:items-stretch">
+            <article
+              class="reveal overflow-hidden bg-navy text-white lg:col-span-7"
+            >
+              <div class="grid h-full md:grid-cols-2">
+                <img
+                  src="assets/img/visitor-walking.png"
+                  width="1200"
+                  height="900"
+                  alt="Visitor walking through a historic Taman Sari courtyard"
+                  class="h-80 w-full object-cover md:h-full"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div class="flex flex-col justify-end p-7 sm:p-10">
+                  <p
+                    class="text-[11px] font-bold uppercase tracking-[0.2em] text-gold"
+                  >
+                    Heritage Walk
+                  </p>
+                  <h3 class="display mt-3 text-4xl">
+                    Walk through a royal retreat.
+                  </h3>
+                  <p class="mt-4 text-sm leading-6 text-white/70">
+                    Look closely at the architecture, changing light, textures,
+                    and traces of the past.
+                  </p>
+                </div>
+              </div>
+            </article>
+            <div class="grid gap-5 sm:grid-cols-3 lg:col-span-5 lg:grid-cols-1">
+              <article class="reveal border border-navy/10 bg-white p-7 sm:p-8">
+                <p
+                  class="text-[11px] font-bold uppercase tracking-[0.2em] text-teal"
+                >
+                  Architecture
+                </p>
+                <h3 class="display mt-2 text-3xl text-navy">
+                  Notice the details.
+                </h3>
+                <p class="mt-3 text-sm leading-6 text-charcoal/65">
+                  Arches, weathered plaster, stone, openings, and changing
+                  perspectives.
+                </p>
+              </article>
+              <article class="reveal border border-navy/10 bg-white p-7 sm:p-8">
+                <p
+                  class="text-[11px] font-bold uppercase tracking-[0.2em] text-teal"
+                >
+                  Culture
+                </p>
+                <h3 class="display mt-2 text-3xl text-navy">
+                  Feel the living heritage.
+                </h3>
+                <p class="mt-3 text-sm leading-6 text-charcoal/65">
+                  Taman Sari sits within the living fabric of Yogyakarta, not
+                  apart from it.
+                </p>
+              </article>
+              <article class="reveal border border-navy/10 bg-white p-7 sm:p-8">
+                <p
+                  class="text-[11px] font-bold uppercase tracking-[0.2em] text-teal"
+                >
+                  Old City
+                </p>
+                <h3 class="display mt-2 text-3xl text-navy">
+                  Continue beyond the walls.
+                </h3>
+                <p class="mt-3 text-sm leading-6 text-charcoal/65">
+                  Let the surrounding streets and kampung become part of the
+                  journey.
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- GALLERY -->
+      <section
+        id="gallery"
+        class="bg-white py-20 sm:py-24 lg:py-32"
+        aria-labelledby="gallery-title"
+      >
+        <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+          <div
+            class="reveal flex flex-col justify-between gap-6 sm:flex-row sm:items-end"
+          >
+            <div>
+              <p
+                class="mb-4 text-xs font-bold uppercase tracking-[0.25em] text-gold"
+              >
+                Gallery
+              </p>
+              <h2
+                id="gallery-title"
+                class="display text-4xl font-medium leading-none text-navy sm:text-5xl lg:text-6xl"
+              >
+                A closer look at Taman Sari.
+              </h2>
+            </div>
+            <p class="max-w-sm text-sm leading-6 text-charcoal/65">
+              Tap any photograph to view it larger.
+            </p>
+          </div>
+          <div class="mt-12 grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-5">
+            <button
+              type="button"
+              class="gallery-item group col-span-2 overflow-hidden text-left sm:row-span-2"
+              data-src="gallery-courtyard.png"
+              data-alt="Taman Sari courtyard and historic architecture"
+            >
+              <img
+                src="assets/img/gallery-courtyard.png"
+                width="1200"
+                height="1200"
+                alt="Taman Sari courtyard and historic architecture"
+                class="h-[340px] w-full object-cover transition duration-700 group-hover:scale-105 sm:h-full"
+                loading="lazy"
+                decoding="async"
+              /><span class="sr-only">Open courtyard photograph</span>
+            </button>
+            <button
+              type="button"
+              class="gallery-item group overflow-hidden text-left"
+              data-src="gallery-arches.png"
+              data-alt="Architectural arches and weathered walls at Taman Sari"
+            >
+              <img
+                src="assets/img/gallery-arches.png"
+                width="900"
+                height="900"
+                alt="Architectural arches and weathered walls at Taman Sari"
+                class="h-44 w-full object-cover transition duration-700 group-hover:scale-105 sm:h-64"
+                loading="lazy"
+                decoding="async"
+              /><span class="sr-only">Open architecture photograph</span>
+            </button>
+            <button
+              type="button"
+              class="gallery-item group overflow-hidden text-left"
+              data-src="gallery-passage.png"
+              data-alt="Historic passageway at Taman Sari"
+            >
+              <img
+                src="assets/img/gallery-passage.png"
+                width="900"
+                height="900"
+                alt="Historic passageway at Taman Sari"
+                class="h-44 w-full object-cover transition duration-700 group-hover:scale-105 sm:h-64"
+                loading="lazy"
+                decoding="async"
+              /><span class="sr-only">Open passage photograph</span>
+            </button>
+            <button
+              type="button"
+              class="gallery-item group overflow-hidden text-left"
+              data-src="gallery-detail.png"
+              data-alt="Close architectural detail at Taman Sari"
+            >
+              <img
+                src="assets/img/gallery-detail.png"
+                width="900"
+                height="900"
+                alt="Close architectural detail at Taman Sari"
+                class="h-44 w-full object-cover transition duration-700 group-hover:scale-105 sm:h-64"
+                loading="lazy"
+                decoding="async"
+              /><span class="sr-only">Open detail photograph</span>
+            </button>
+            <button
+              type="button"
+              class="gallery-item group overflow-hidden text-left"
+              data-src="gallery-kampung.png"
+              data-alt="Surrounding neighborhood near Taman Sari in Yogyakarta"
+            >
+              <img
+                src="assets/img/gallery-kampung.png"
+                width="900"
+                height="900"
+                alt="Surrounding neighborhood near Taman Sari in Yogyakarta"
+                class="h-44 w-full object-cover transition duration-700 group-hover:scale-105 sm:h-64"
+                loading="lazy"
+                decoding="async"
+              /><span class="sr-only">Open neighborhood photograph</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- LIVING HERITAGE -->
+      <section
+        class="bg-ivory py-20 sm:py-24 lg:py-32"
+        aria-labelledby="living-title"
+      >
+        <div
+          class="mx-auto grid max-w-7xl items-center gap-10 px-5 sm:px-8 lg:grid-cols-12 lg:gap-16 lg:px-10"
+        >
+          <div class="reveal lg:col-span-7">
+            <img
+              src="assets/img/living-heritage.png"
+              width="1400"
+              height="900"
+              alt="Warm late-afternoon atmosphere across Taman Sari historic walls and pathways"
+              class="h-[420px] w-full object-cover sm:h-[560px]"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="reveal lg:col-span-4 lg:col-start-9">
+            <p
+              class="mb-4 text-xs font-bold uppercase tracking-[0.25em] text-teal"
+            >
+              A Living Heritage
+            </p>
+            <h2
+              id="living-title"
+              class="display text-4xl font-medium leading-none text-navy sm:text-5xl lg:text-6xl"
+            >
+              A place you feel before you fully understand it.
+            </h2>
+            <p
+              class="mt-7 text-base leading-7 text-charcoal/75 sm:text-lg sm:leading-8"
+            >
+              Taman Sari is more than a historic site. It is an atmosphere — a
+              meeting of water, architecture, memory, and everyday life within
+              the living fabric of Yogyakarta.
+            </p>
+            <a
+              href="#journal"
+              class="mt-8 inline-flex min-h-11 items-center gap-3 text-sm font-bold text-navy hover:text-teal"
+              >Read the stories <span class="text-gold">→</span></a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- STORIES -->
+      <section
+        id="journal"
+        class="bg-white py-20 sm:py-24 lg:py-32"
+        aria-labelledby="journal-title"
+      >
+        <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+          <div class="reveal">
+            <p
+              class="mb-4 text-xs font-bold uppercase tracking-[0.25em] text-gold"
+            >
+              Taman Sari Journal
+            </p>
+            <h2
+              id="journal-title"
+              class="display text-4xl font-medium leading-none text-navy sm:text-5xl lg:text-6xl"
+            >
+              Stories from the Water Palace.
+            </h2>
+          </div>
+          <div class="mt-12 grid gap-10 lg:grid-cols-3">
+            <article class="reveal">
+              <img
+                src="assets/img/journal-light.png"
+                width="1000"
+                height="700"
+                alt="Light and stone textures at Taman Sari"
+                class="h-64 w-full object-cover"
+                loading="lazy"
+                decoding="async"
+              />
+              <p
+                class="mt-5 text-[11px] font-bold uppercase tracking-[0.2em] text-teal"
+              >
+                Culture
+              </p>
+              <h3 class="display mt-2 text-3xl leading-tight text-navy">
+                The Quiet Beauty of Taman Sari
+              </h3>
+              <p class="mt-3 text-sm leading-6 text-charcoal/65">
+                Water, light, stone, and silence create an atmosphere that
+                rewards slow looking.
+              </p>
+            </article>
+            <article class="reveal">
+              <img
+                src="assets/img/journal-layers.png"
+                width="1000"
+                height="700"
+                alt="Layered historic spaces and passages at Taman Sari"
+                class="h-64 w-full object-cover"
+                loading="lazy"
+                decoding="async"
+              />
+              <p
+                class="mt-5 text-[11px] font-bold uppercase tracking-[0.2em] text-teal"
+              >
+                Heritage
+              </p>
+              <h3 class="display mt-2 text-3xl leading-tight text-navy">
+                Following the Layers of a Royal Retreat
+              </h3>
+              <p class="mt-3 text-sm leading-6 text-charcoal/65">
+                Courtyards, bathing spaces, and hidden corners reveal different
+                layers of the complex.
+              </p>
+            </article>
+            <article class="reveal">
+              <img
+                src="assets/img/journal-old-city.png"
+                width="1000"
+                height="700"
+                alt="Everyday streets and textures around the old city near Taman Sari"
+                class="h-64 w-full object-cover"
+                loading="lazy"
+                decoding="async"
+              />
+              <p
+                class="mt-5 text-[11px] font-bold uppercase tracking-[0.2em] text-teal"
+              >
+                Old City
+              </p>
+              <h3 class="display mt-2 text-3xl leading-tight text-navy">
+                After Taman Sari: Into the Old City
+              </h3>
+              <p class="mt-3 text-sm leading-6 text-charcoal/65">
+                Continue into surrounding streets and discover the everyday life
+                around the heritage site.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- KONTAK / INFORMASI -->
+      <section
+        id="visit"
+        class="bg-navy py-20 text-white sm:py-24 lg:py-28"
+        aria-labelledby="visit-title"
+      >
+        <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+          <div class="grid gap-12 lg:grid-cols-12 lg:items-end">
+            <div class="reveal lg:col-span-6">
+              <p
+                class="mb-4 text-xs font-bold uppercase tracking-[0.25em] text-gold"
+              >
+                Visit Information
+              </p>
+              <h2
+                id="visit-title"
+                class="display text-5xl font-medium leading-[.95] sm:text-6xl"
+              >
+                Make space for a slower kind of discovery.
+              </h2>
+              <p
+                class="mt-6 max-w-xl text-base leading-7 text-white/70 sm:text-lg"
+              >
+                Taman Sari is a heritage destination in Yogyakarta. Use this
+                guide as inspiration before exploring the site and its
+                surrounding neighborhood.
+              </p>
+            </div>
+            <div
+              class="grid gap-px overflow-hidden border border-white/10 bg-white/10 sm:grid-cols-2 lg:col-span-5 lg:col-start-8"
+            >
+              <div class="bg-navy p-6">
+                <p
+                  class="text-[11px] font-bold uppercase tracking-[0.2em] text-gold"
+                >
+                  Destination
+                </p>
+                <p class="mt-3 text-sm leading-6 text-white/75">
+                  Taman Sari, Yogyakarta, Indonesia
+                </p>
+              </div>
+              <div class="bg-navy p-6">
+                <p
+                  class="text-[11px] font-bold uppercase tracking-[0.2em] text-gold"
+                >
+                  Best for
+                </p>
+                <p class="mt-3 text-sm leading-6 text-white/75">
+                  Heritage, architecture, photography, slow exploration
+                </p>
+              </div>
+              <div class="bg-navy p-6">
+                <p
+                  class="text-[11px] font-bold uppercase tracking-[0.2em] text-gold"
+                >
+                  Before you go
+                </p>
+                <p class="mt-3 text-sm leading-6 text-white/75">
+                  Check current opening information and local conditions before
+                  visiting.
+                </p>
+              </div>
+              <div class="bg-navy p-6">
+                <p
+                  class="text-[11px] font-bold uppercase tracking-[0.2em] text-gold"
+                >
+                  Travel mindset
+                </p>
+                <p class="mt-3 text-sm leading-6 text-white/75">
+                  Respect the heritage site, local residents, and photography
+                  boundaries.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FINAL CTA -->
+      <section class="bg-ivory py-24 sm:py-32" aria-labelledby="cta-title">
+        <div class="mx-auto max-w-4xl px-5 text-center sm:px-8">
+          <p
+            class="reveal text-xs font-bold uppercase tracking-[0.25em] text-teal"
+          >
+            Your Taman Sari Journey
+          </p>
+          <h2
+            id="cta-title"
+            class="display reveal mt-5 text-5xl font-medium leading-[.95] text-navy sm:text-6xl lg:text-7xl"
+          >
+            Step into a quieter side of Yogyakarta.
+          </h2>
+          <p
+            class="reveal mx-auto mt-7 max-w-2xl text-base leading-7 text-charcoal/70 sm:text-lg"
+          >
+            Come for the architecture. Stay for the atmosphere, the stories, and
+            the details that reveal themselves slowly.
+          </p>
+          <a
+            href="#hero"
+            class="reveal mt-9 inline-flex min-h-12 items-center gap-3 rounded-full bg-navy px-7 py-3 text-sm font-bold text-white hover:bg-teal"
+            >Back to the beginning <span aria-hidden="true">↑</span></a
+          >
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-[#0d2d38] py-12 text-white/70">
+      <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+        <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+          <div>
+            <div class="display text-2xl font-semibold text-white">
+              Taman Sari
+            </div>
+            <p class="mt-4 max-w-xs text-sm leading-6">
+              A historic royal retreat where water, architecture, and memory
+              meet.
+            </p>
+          </div>
+          <div>
+            <p class="text-xs font-bold uppercase tracking-[0.2em] text-gold">
+              Explore
+            </p>
+            <div class="mt-4 flex flex-col gap-3 text-sm">
+              <a href="#story" class="hover:text-white">The Site</a
+              ><a href="#experiences" class="hover:text-white">Experiences</a
+              ><a href="#gallery" class="hover:text-white">Gallery</a>
+            </div>
+          </div>
+          <div>
+            <p class="text-xs font-bold uppercase tracking-[0.2em] text-gold">
+              Stories
+            </p>
+            <div class="mt-4 flex flex-col gap-3 text-sm">
+              <a href="#journal" class="hover:text-white">Journal</a
+              ><a href="#visit" class="hover:text-white">Visit Information</a>
+            </div>
+          </div>
+          <div>
+            <p class="text-xs font-bold uppercase tracking-[0.2em] text-gold">
+              About this site
+            </p>
+            <p class="mt-4 text-sm leading-6">
+              A destination-promotion concept for the “Visit to Jogja” web
+              design theme.
+            </p>
+          </div>
+        </div>
+        <div class="mt-12 border-t border-white/10 pt-6 text-xs">
+          © 2026 Taman Sari — Yogyakarta, Indonesia.
+        </div>
+      </div>
+    </footer>
+
+    <!-- GALLERY LIGHTBOX -->
+    <div
+      id="lightbox"
+      class="fixed inset-0 z-[90] hidden items-center justify-center bg-black/90 p-5"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="lightbox-caption"
+    >
+      <button
+        id="lightbox-close"
+        type="button"
+        class="absolute right-5 top-5 inline-flex min-h-12 min-w-12 items-center justify-center rounded-full bg-white/10 text-2xl text-white hover:bg-white/20"
+        aria-label="Close gallery"
+      >
+        ×
+      </button>
+      <figure class="max-h-full max-w-6xl">
+        <img
+          id="lightbox-image"
+          src=""
+          alt=""
+          class="max-h-[82vh] w-auto max-w-full object-contain"
+        />
+        <figcaption
+          id="lightbox-caption"
+          class="mt-3 text-center text-sm text-white/70"
+        ></figcaption>
+      </figure>
+    </div>
+
+    <script>
+      const header = document.getElementById("site-header"),
+        menuBtn = document.getElementById("menu-btn"),
+        mobileMenu = document.getElementById("mobile-menu");
+      const onScroll = () =>
+        header.classList.toggle("nav-scrolled", window.scrollY > 40);
+      window.addEventListener("scroll", onScroll, { passive: true });
+      onScroll();
+      menuBtn.addEventListener("click", () => {
+        const opening = mobileMenu.classList.contains("hidden");
+        mobileMenu.classList.toggle("hidden");
+        menuBtn.setAttribute("aria-expanded", String(opening));
+        menuBtn.setAttribute(
+          "aria-label",
+          opening ? "Close menu" : "Open menu",
+        );
+      });
+      mobileMenu.querySelectorAll("a").forEach((a) =>
+        a.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+          menuBtn.setAttribute("aria-expanded", "false");
+          menuBtn.setAttribute("aria-label", "Open menu");
+        }),
+      );
+
+      const observer = new IntersectionObserver(
+        (entries) =>
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add("is-visible");
+              observer.unobserve(e.target);
+            }
+          }),
+        { threshold: 0.12 },
+      );
+      document.querySelectorAll(".reveal").forEach((el) => {
+        if (!el.classList.contains("is-visible")) observer.observe(el);
+      });
+
+      const lightbox = document.getElementById("lightbox"),
+        lbImage = document.getElementById("lightbox-image"),
+        lbCaption = document.getElementById("lightbox-caption"),
+        lbClose = document.getElementById("lightbox-close");
+      const closeLightbox = () => {
+        lightbox.classList.add("hidden");
+        lightbox.classList.remove("flex");
+        document.body.classList.remove("lightbox-open");
+        lbImage.src = "";
+      };
+      document.querySelectorAll(".gallery-item").forEach((item) =>
+        item.addEventListener("click", () => {
+          lbImage.src = item.dataset.src;
+          lbImage.alt = item.dataset.alt;
+          lbCaption.textContent = item.dataset.alt;
+          lightbox.classList.remove("hidden");
+          lightbox.classList.add("flex");
+          document.body.classList.add("lightbox-open");
+          lbClose.focus();
+        }),
+      );
+      lbClose.addEventListener("click", closeLightbox);
+      lightbox.addEventListener("click", (e) => {
+        if (e.target === lightbox) closeLightbox();
+      });
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && !lightbox.classList.contains("hidden"))
+          closeLightbox();
+      });
+    </script>
+  </body>
+</html>
